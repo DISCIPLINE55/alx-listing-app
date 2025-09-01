@@ -1,40 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# ALX Listing App
 
-## Getting Started
+The **ALX Listing App** is the foundation of an Airbnb clone built with **Next.js**, **TypeScript**, **TailwindCSS**, and **ESLint**.  
+This project scaffolds the initial structure, ensuring a maintainable, scalable, and production-ready codebase for building a property listing page.
 
-First, run the development server:
+---
 
+## 📌 Project Goals
+
+- Scaffold a **Next.js application** with TypeScript, ESLint, and TailwindCSS.  
+- Establish a clean **folder structure** for scalability and readability.  
+- Create **reusable components** (e.g., Card, Button) for consistent UI development.  
+- Define **TypeScript interfaces** to enforce type safety across the app.  
+- Organize project **assets** for easy access and maintainability.  
+- Provide clear documentation for setup and usage.  
+
+---
+
+## 📂 Project Structure
+
+alx-listing-app/
+├── components/
+│ └── common/
+│ ├── Button.tsx # Reusable button component
+│ └── Card.tsx # Reusable card component
+│
+├── constants/
+│ └── index.ts # Central place for constants (API URLs, UI text, etc.)
+│
+├── interfaces/
+│ └── index.ts # TypeScript interfaces (CardProps, ButtonProps, etc.)
+│
+├── pages/
+│ ├── api/
+│ │ └── hello.ts
+│ └── index.tsx # Main landing page
+│
+├── public/
+│ └── assets/ # Images and SVGs from Figma
+│
+├── styles/
+│ └── globals.css # Tailwind base, components, and utilities only
+│
+├── .eslintrc.json # ESLint configuration
+├── tailwind.config.js # TailwindCSS setup
+├── tsconfig.json # TypeScript configuration
+├── package.json # Dependencies and scripts
+├── README.md # Project documentation
+└── next.config.js # Next.js configuration
+
+
+---
+
+## ⚙️ Setup & Run Instructions
+
+### 1️⃣ Clone the repository
 ```bash
+git clone https://github.com/<your-username>/alx-listing-app.git
+cd alx-listing-app
+### 2️⃣ Install Dependencies
+```bash
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4️⃣ Open the app
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Visit: http://localhost:3000
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+📘 Tech Stack
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Next.js – React framework for server-side rendering and routing.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+TypeScript – Static typing for safer, maintainable code.
 
-## Learn More
+TailwindCSS – Utility-first CSS framework for fast, responsive styling.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+ESLint – Linting tool to enforce clean and consistent code.
