@@ -1,19 +1,21 @@
 import React from "react";
 
-export interface ButtonProps {
-  label: string;
-  onClick?: () => void;
+export interface CardProps {
+  title: string;
+  description: string;
+  imageUrl: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+const Card: React.FC<CardProps> = ({ title, description, imageUrl }) => {
   return (
-    <button
-      onClick={onClick}
-      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-    >
-      {label}
-    </button>
+    <div className="border rounded-lg overflow-hidden shadow-md">
+      <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
+      <div className="p-4">
+        <h3 className="text-lg font-bold">{title}</h3>
+        <p className="text-gray-600">{description}</p>
+      </div>
+    </div>
   );
 };
 
-export default Button;
+export default Card;
